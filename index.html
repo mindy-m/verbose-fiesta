@@ -61,7 +61,7 @@
                 shutterSpeed = (35 * aperature + 30 * 3.89) / focalLength;
                 var readyForShutterSpeed = confirm("Have you entered both aperature and focal length above?");
                 if (readyForShutterSpeed == true) {
-                    document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: " + shutterSpeed;
+                    document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: " + Math.floor(shutterSpeed);
                 }
             }
         </script>
