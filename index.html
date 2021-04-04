@@ -23,7 +23,7 @@
             After seeing the aperature you entered appear above, please click below to enter focal length.
         </p>
 
-        <button onclick="askShutterSpeed()">
+        <button onclick="askFocalLength()">
             Click Here Second
         </button>
 
@@ -31,6 +31,16 @@
         <br>
         <br>
         <p>
+            After checking that both the aperature and the shutter speed that you entered appeared above, please click below to calculate shutter speed.
+        </p>
+
+        <button onclick="calculateShutterSpeed()">
+            Click Here Last
+        </button>
+
+        <p id="shutterSpeed3"></p>
+        <br>
+        <br>
         
         <script>
             function askAperature() {
@@ -46,6 +56,14 @@
                     document.getElementById("focalLength2").innerHTML = "Focal Length: " + focalLength;
                 }
             }
+
+            function calculateShutterSpeed() {
+                var readyForShutterSpeed = confirm("Have you entered both aperature and focal length above?");
+                if (readyForShutterSpeed == true) {
+                    document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: ";
+                }
+            }
+
         </script>
 
     </body>
