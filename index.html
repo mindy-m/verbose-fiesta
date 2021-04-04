@@ -20,14 +20,17 @@
         <br>
         <br>
         <p>
-            After seeing the aperature you entered appear above, please click below to enter shutter speed.
+            After seeing the aperature you entered appear above, please click below to enter focal length.
         </p>
 
         <button onclick="askShutterSpeed()">
             Click Here Second
         </button>
 
-        <p id="shutterSpeed2"></p>
+        <p id="focalLength2"></p>
+        <br>
+        <br>
+        <p>
         
         <script>
             function askAperature() {
@@ -37,10 +40,10 @@
                 }
             }
 
-            function askShutterSpeed() {
-                var shutterSpeed = prompt("Please enter the shutter speed", "Enter shutter speed here");
-                if (aperature !=null) {
-                    document.getElementById("shutterSpeed2").innerHTML = "Shutter Speed: " + shutterSpeed;
+            function askFocalLength() {
+                var focalLength = prompt("Please enter the shutter speed", "Enter focal length here");
+                if (focalLength !=null) {
+                    document.getElementById("focalLength2").innerHTML = "Focal Length: " + focalLength;
                 }
             }
         </script>
