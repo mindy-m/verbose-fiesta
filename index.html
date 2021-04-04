@@ -17,12 +17,30 @@
         </button>
 
         <p id="aperature1"></p>
+        <br>
+        <br>
+        <p>
+            After seeing the aperature you entered appear above, please click below to enter shutter speed.
+        </p>
+
+        <button onclick="askShutterSpeed()">
+            Click Here Second
+        </button>
+
+        <p id="shutterSpeed2"></p>
         
         <script>
             function askAperature() {
                 var aperature = prompt("Please enter the aperature", "Enter aperature here");
                 if (aperature !=null) {
                     document.getElementById("aperature1").innerHTML = "Aperature: " + aperature;
+                }
+            }
+
+            function askShutterSpeed() {
+                var shutterSpeed = prompt("Please enter the shutter speed", "Enter shutter speed here");
+                if (aperature !=null) {
+                    document.getElementById("shutterSpeed2").innerHTML = "Shutter Speed: " + shutterSpeed;
                 }
             }
         </script>
