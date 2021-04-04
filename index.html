@@ -44,26 +44,26 @@
         
         <script>
             function askAperature() {
-                var aperature = prompt("Please enter the aperature", "Enter aperature here");
+                aperature = prompt("Please enter the aperature", "Enter aperature here");
                 if (aperature !=null) {
                     document.getElementById("aperature1").innerHTML = "Aperature: " + aperature;
                 }
             }
 
             function askFocalLength() {
-                var focalLength = prompt("Please enter the shutter speed", "Enter focal length here");
+                focalLength = prompt("Please enter the shutter speed", "Enter focal length here");
                 if (focalLength !=null) {
                     document.getElementById("focalLength2").innerHTML = "Focal Length: " + focalLength;
                 }
             }
 
             function calculateShutterSpeed() {
+                shutterSpeed = (35 * aperature + 30 * 3.89) / focalLength;
                 var readyForShutterSpeed = confirm("Have you entered both aperature and focal length above?");
                 if (readyForShutterSpeed == true) {
-                    document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: ";
+                    document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: " + shutterSpeed;
                 }
             }
-
         </script>
 
     </body>
