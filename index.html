@@ -11,17 +11,17 @@
     <body>
         <h1>Shutter Speed Calculator</h1>
 
-        <p>Please enter aperature below.</p>
+        <p>Please enter aperture below.</p>
 
-        <button onclick="askAperature()">
+        <button onclick="askAperture()">
             Click Here First
         </button>
 
-        <p id="aperature1"></p>
+        <p id="aperture1"></p>
         <br>
         <br>
         <p>
-            After seeing the aperature you entered appear above, please click below to enter focal length.
+            After seeing the aperture you entered appear above, please click below to enter focal length.
         </p>
 
         <button onclick="askFocalLength()">
@@ -32,7 +32,7 @@
         <br>
         <br>
         <p>
-            After checking that both the aperature and the shutter speed that you entered appeared above, please click below to calculate shutter speed.
+            After checking that both the aperture and the shutter speed that you entered appeared above, please click below to calculate shutter speed.
         </p>
 
         <button onclick="calculateShutterSpeed()">
@@ -44,10 +44,10 @@
         <br>
         
         <script>
-            function askAperature() {
-                aperature = prompt("Please enter the aperature.", "Enter aperature here");
-                if (aperature !=null) {
-                    document.getElementById("aperature1").innerHTML = "Aperature: " + aperature;
+            function askAperture() {
+                aperature = prompt("Please enter the aperture.", "Enter aperature here");
+                if (aperture !=null) {
+                    document.getElementById("aperture1").innerHTML = "Aperture: " + aperture;
                 }
             }
 
@@ -59,8 +59,8 @@
             }
 
             function calculateShutterSpeed() {
-                shutterSpeed = (35 * aperature + 30 * 3.89) / focalLength;
-                var readyForShutterSpeed = confirm("Have you entered both aperature and focal length above?");
+                shutterSpeed = (35 * aperture + 30 * 3.89) / focalLength;
+                var readyForShutterSpeed = confirm("Have you entered both aperture and focal length above?");
                 if (readyForShutterSpeed == true) {
                     document.getElementById("shutterSpeed3").innerHTML = "Shutter Speed: " + Math.floor(shutterSpeed);
                 }
